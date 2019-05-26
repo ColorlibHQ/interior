@@ -151,6 +151,39 @@ Epsilon_Customizer::add_field(
         'default'     => '#fff',
     )
 );
+// Header menu dropdown color picker
+Epsilon_Customizer::add_field(
+    'interior_header_menu_dropdown_color',
+    array(
+        'type'        => 'epsilon-color-picker',
+        'label'       => esc_html__( 'Nav Menu Dropdown Color', 'interior' ),
+        'sanitize_callback' => 'sanitize_text_field',
+        'section'     => 'interior_headertop_options_section',
+        'default'     => '#000',
+    )
+);
+// Sticky Header menu dropdown color picker
+Epsilon_Customizer::add_field(
+    'interior_sticky_header_dropdown_color',
+    array(
+        'type'        => 'epsilon-color-picker',
+        'label'       => esc_html__( 'Sticky Menu Dropdown Color', 'interior' ),
+        'sanitize_callback' => 'sanitize_text_field',
+        'section'     => 'interior_headertop_options_section',
+        'default'     => '#000',
+    )
+);
+// Header menu dropdown Hover color picker
+Epsilon_Customizer::add_field(
+    'interior_header_dropdown_menu_hover_color',
+    array(
+        'type'        => 'epsilon-color-picker',
+        'label'       => esc_html__( 'Dropdown Menu Hover Color', 'interior' ),
+        'sanitize_callback' => 'sanitize_text_field',
+        'section'     => 'interior_headertop_options_section',
+        'default'     => '#000',
+    )
+);
 // Page Header Background Color Picker
 Epsilon_Customizer::add_field(
     'interior_headerbgcolor',
@@ -250,7 +283,7 @@ if( defined( 'INTERIOR_COMPANION_VERSION' ) ) {
         'interior-blog-social-share-toggle',
         array(
             'type'        => 'epsilon-toggle',
-            'label'       => esc_html__( 'Blog Social Share Show/Hide', 'interior' ),
+            'label'       => esc_html__( 'Social Share Button Show/Hide', 'interior' ),
             'section'     => 'interior_blog_options_section',
             'sanitize_callback' => 'sanitize_text_field'
         )

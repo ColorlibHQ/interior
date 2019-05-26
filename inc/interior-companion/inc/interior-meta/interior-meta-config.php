@@ -14,8 +14,8 @@ if( !defined( 'WPINC' ) ){
     // Interior meta scripts enqueue
     add_action( 'admin_enqueue_scripts', 'interior_meta_scripts' );
     function interior_meta_scripts() {
-        wp_enqueue_style( 'interior-meta-style', plugins_url( 'assets/css/interior-meta.css', __FILE__ ) );
-        wp_enqueue_script( 'interior-meta-script', plugins_url( 'assets/js/interior-meta.js', __FILE__ ), array('jquery'), '1.0', true );
+        wp_enqueue_style( 'interior-meta-style', get_template_directory_uri().'/inc/interior-companion/inc/interior-meta/assets/css/interior-meta.css' );
+        wp_enqueue_script( 'interior-meta-script', get_template_directory_uri().'/inc/interior-companion/inc/interior-meta/assets/js/interior-meta.js', array('jquery'), '1.0', true );
     }
 
     // Page Header select option meta

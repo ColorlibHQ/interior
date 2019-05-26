@@ -27,6 +27,9 @@ function interior_common_custom_css() {
 		$navmenuHovColor 		= esc_attr( interior_opt( 'interior_header_navbar_menuHovColor', '#fff' ) );
 		$stickynavmenuColor 	= esc_attr( interior_opt( 'interior_header_sticky_navbar_menuColor', '#fff' ) );
 		$stickynavmenuHovColor 	= esc_attr( interior_opt( 'interior_header_sticky_navbar_menuHovColor', '#fff' ) );
+		$navMenuDropdown 	= esc_attr( interior_opt( 'interior_header_menu_dropdown_color', '#000' ) );
+		$stickyMenuDropdown 	= esc_attr( interior_opt( 'interior_sticky_header_dropdown_color', '#000' ) );
+		$DropdownMenuHoverColor	= esc_attr( interior_opt( 'interior_header_dropdown_menu_hover_color', '#000' ) );
 		$foftext1     	   = esc_attr( interior_opt( 'interior_fof_textonecolor_settings' ) );
 		$foftext2     	   = esc_attr( interior_opt( 'interior_fof_texttwocolor_settings' ) );
 		$fofbgcolor        = esc_attr( interior_opt( 'interior_fof_bgcolor_settings' ) );
@@ -226,19 +229,30 @@ function interior_common_custom_css() {
 			#header.header-scrolled {
 				background: {$stickynavbarbg};
 			}
-			.nav-menu a {
+			.nav-menu > li > a{
 				color: {$navmenuColor};
 			}
+			.nav-menu > ul li:hover a,
 			.nav-menu li:hover > a, 
 			.nav-menu > .menu-active > a,
 			.nav-menu a:hover {
 				color: {$navmenuHovColor};
 			}
+			.nav-menu ul li a{
+			    color: {$navMenuDropdown}
+			}
 			.header-scrolled .nav-menu a {
 				color: {$stickynavmenuColor};
 			}
+			.header-scrolled .nav-menu ul li a{
+			    color: {$stickyMenuDropdown}
+			}
 			.header-scrolled .nav-menu a:hover {
 				color: {$stickynavmenuHovColor};
+			}
+			.nav-menu ul li:hover a,
+			.header-scrolled .nav-menu ul li:hover a{
+			    color: {$DropdownMenuHoverColor}
 			}
 
 

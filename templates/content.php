@@ -13,10 +13,13 @@ if( ! defined( 'ABSPATH' ) ) {
 }
 
 // Post Item Start
+$thumClass = has_post_thumbnail() ? 'has-thum single-blog-post row' : 'no-post-thum single-blog-post row';
+
+
 ?>
 
 
-<div id="<?php the_ID(); ?>" <?php post_class( esc_attr( 'single-blog-post row' ) ); ?>>
+<div id="<?php the_ID(); ?>" <?php post_class( esc_attr( $thumClass ) ); ?>>
 
 	<div class="col-lg-3  col-md-3 meta-details">
 		<?php 

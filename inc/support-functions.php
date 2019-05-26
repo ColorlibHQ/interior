@@ -21,7 +21,6 @@ function interior_post_cats() {
     if( $cats ) {
 
         $categories .= '<ul class="tags">';
-        $categories .= '<li><i class="fa fm fa-th-list"></i></li>';
         
         foreach( $cats as $cat ) {
            $categories .= '<li><a href="' . esc_url( get_category_link( absint( $cat->term_id ) ) ) . '">' .esc_html( $cat->name ) . '</a></li>';

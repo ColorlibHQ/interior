@@ -147,7 +147,7 @@ function interior_theme_logo( $class = '' ) {
 	if( ! empty( $imageUrl[0] ) ) {
 		$siteLogo = '<a class="' . esc_attr( $class ) . '" href="' . esc_url( $siteUrl ) . '"><img src="' . esc_url( $imageUrl[0] ) . '" alt="' . esc_attr( interior_image_alt( $imageUrl[0] ) ) . '"></a>';
 	}else {
-		$siteLogo = '<h2><a class="' . esc_attr( $class ) . '" href="' . esc_url( $siteUrl ) . '">' . esc_html( get_bloginfo('name') ) . '</a></h2>';
+		$siteLogo = '<h2><a class="' . esc_attr( $class ) . '" href="' . esc_url( $siteUrl ) . '">' . esc_html( get_bloginfo('name') ) . '</a></h2><span>'. get_bloginfo('description') .'</span>';
 	}
 	
 	return '<div id="logo">' . $siteLogo . '</div>';
@@ -164,6 +164,17 @@ function interior_pull_right( $id = '', $condation ) {
     }
     
 }
+
+// No post thumbnail
+function interior_post_class( $classes ) {
+    if(!has_post_thumbnail()) {
+        $classes[] = 'no-post-thumbnail';
+    }
+    return $classes;
+}
+add_filter( 'post_class', 'interior_post_class' );
+
+
 
 // image alt tag
 function interior_image_alt( $url = '' ) {

@@ -143,7 +143,7 @@ class Epsilon_init_Dashboard {
 				__( 'We\'ve been working hard on making %1$s the best one out there. We\'re interested in hearing your thoughts about %1$s and what we could do to make it even better. %2$sSend your feedback our way%3$s.', 'interior' ),
 				array(
 					'interior',
-					'<a target="_blank" href="https://bit.ly/feedback-mosh">',
+					'<a target="_blank" href="https://bit.ly/feedback-interior">',
 					'</a>',
 				)
 			);
@@ -151,19 +151,14 @@ class Epsilon_init_Dashboard {
 		$notifications = Epsilon_Notifications::get_instance();
 		$notifications->add_notice(
 			array(
-				'id'      => 'mosh_notification_feedback',
+				'id'      => 'interior_notification_feedback',
 				'type'    => 'notice epsilon-big',
 				'message' => $html,
 			)
 		);
 	}
 
-	/**
-	 *
-	 */
-	public function init_nav_menus() {
-		new Epsilon_Section_Navigation_Menu( 'mosh_frontpage_sections_' );
-	}
+
 
 	/**
 	 * Initiate the welcome screen
