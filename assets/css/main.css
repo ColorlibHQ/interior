@@ -2058,6 +2058,12 @@ h6 {
     margin: 0;
     max-width: 130px;
 }
+#header #logo .header-tagline{
+    color: #fff
+}
+.header-top .top_phone:hover, .header-top .top_email:hover{
+    color: #fff
+}
 
 @media (max-width: 768px) {
     #header #logo h1 {
@@ -2099,7 +2105,7 @@ h6 {
 
 .nav-menu ul ul {
     top: 0;
-    right: 100%
+    left: 100%
 }
 
 .nav-menu ul li {

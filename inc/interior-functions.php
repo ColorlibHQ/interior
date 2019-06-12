@@ -147,7 +147,7 @@ function interior_theme_logo( $class = '' ) {
 	if( ! empty( $imageUrl[0] ) ) {
 		$siteLogo = '<a class="' . esc_attr( $class ) . '" href="' . esc_url( $siteUrl ) . '"><img src="' . esc_url( $imageUrl[0] ) . '" alt="' . esc_attr( interior_image_alt( $imageUrl[0] ) ) . '"></a>';
 	}else {
-		$siteLogo = '<h2><a class="' . esc_attr( $class ) . '" href="' . esc_url( $siteUrl ) . '">' . esc_html( get_bloginfo('name') ) . '</a></h2><span>'. get_bloginfo('description') .'</span>';
+		$siteLogo = '<h2><a class="' . esc_attr( $class ) . '" href="' . esc_url( $siteUrl ) . '">' . esc_html( get_bloginfo('name') ) . '</a></h2><span class="header-tagline">'. get_bloginfo('description') .'</span>';
 	}
 	
 	return '<div id="logo">' . $siteLogo . '</div>';

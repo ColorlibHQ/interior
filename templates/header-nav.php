@@ -16,13 +16,13 @@
 
                         $attrNumber = str_replace( ' ', '', $phone );
 
-                        echo '<a href="tel:'.esc_attr( $attrNumber ).'">'.esc_html( $phone ).'</a>';
+                        echo '<a class="top_phone" href="tel:'.esc_attr( $attrNumber ).'">'.esc_html( $phone ).'</a>';
                        
                     }
                     // Email
                     if( $email ) {
 
-                        echo '<a href="mailto:'.esc_attr( $email ).'">'.esc_html( $email ).'</a>';
+                        echo '<a class="top_email" href="mailto:'.esc_attr( $email ).'">'.esc_html( $email ).'</a>';
                        
                     }
                     ?>           
@@ -62,7 +62,7 @@
             $args = array(
                 'theme_location' => 'primary-menu',
                 'container'      => '',
-                'depth'          => 2,
+                'depth'          => 3,
                 'menu_class'     => 'nav-menu',
                 'fallback_cb'    => 'interior_bootstrap_navwalker::fallback',
                 'walker'         => new interior_bootstrap_navwalker(),
