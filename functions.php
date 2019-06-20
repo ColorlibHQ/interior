@@ -96,6 +96,13 @@ require_once( INTERIOR_DIR_PATH_INC . 'class-epsilon-dashboard-autoloader.php' )
 require_once( INTERIOR_DIR_PATH_INC . 'class-epsilon-init-dashboard.php' );
 
 
+// Admin Enqueue Script
+function interior_admin_script(){
+    wp_enqueue_style( 'admin_css', get_template_directory_uri().'/assets/css/interior_admin.css', false, '1.0.0' );
+    wp_enqueue_script( 'interior_admin_js', get_template_directory_uri().'/assets/js/interior_admin.js', false, '1.0.0' );
+}
+add_action( 'admin_enqueue_scripts', 'interior_admin_script' );
+
 /**
  * Instantiate Interior object
  *
